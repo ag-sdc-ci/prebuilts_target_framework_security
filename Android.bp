@@ -1,0 +1,35 @@
+// Auto-generated Blueprint for system/security (framework extractive)
+// Staged from Extractive APEX package: org.blisslabs.ag.ext.security
+
+package {
+    default_applicable_licenses: ["system_security_license"],
+}
+
+license {
+    name: "system_security_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["NOTICE"],
+}
+
+filegroup {
+    name: "credstore_aidl",
+    srcs: [
+        "identity/binder/android/security/identity/ICredential.aidl",
+        "identity/binder/android/security/identity/IWritableCredential.aidl",
+        "identity/binder/android/security/identity/ICredentialStore.aidl",
+        "identity/binder/android/security/identity/AccessControlProfileParcel.aidl",
+        "identity/binder/android/security/identity/EntryNamespaceParcel.aidl",
+        "identity/binder/android/security/identity/EntryParcel.aidl",
+        "identity/binder/android/security/identity/RequestNamespaceParcel.aidl",
+        "identity/binder/android/security/identity/RequestEntryParcel.aidl",
+        "identity/binder/android/security/identity/ResultNamespaceParcel.aidl",
+        "identity/binder/android/security/identity/ResultEntryParcel.aidl",
+        "identity/binder/android/security/identity/GetEntriesResultParcel.aidl",
+        "identity/binder/android/security/identity/AuthKeyParcel.aidl",
+        "identity/binder/android/security/identity/SecurityHardwareInfoParcel.aidl",
+        "identity/binder/android/security/identity/ICredentialStoreFactory.aidl",
+        "identity/binder/android/security/identity/ISession.aidl",
+    ],
+    path: "identity/binder",
+}

@@ -1,0 +1,7 @@
+{
+	"provideLibs": [	
+		    "libdummy_ext_security_framework-x86_64-v2.so",
+		    "libdummy_ext_security_framework.so"
+	],
+	"visible": true
+}

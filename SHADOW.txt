@@ -1,0 +1,5 @@
+upstream_repo: system/security
+framework_extractive: true
+package: org.blisslabs.ag.ext.security.framework
+source: https://android.googlesource.com/platform/system/security
+build_type: extractive_apex
