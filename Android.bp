@@ -33,3 +33,94 @@ filegroup {
     ],
     path: "identity/binder",
 }
+
+aidl_interface {
+    name: "android.security.legacykeystore",
+    local_include_dir: "aidl",
+    srcs: ["aidl/android/security/legacykeystore/*.aidl"],
+    unstable: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+            apps_enabled: false,
+        },
+    },
+}
+
+aidl_interface {
+    name: "android.security.authorization",
+    local_include_dir: "aidl",
+    srcs: ["aidl/android/security/authorization/*.aidl"],
+    imports: [
+        "android.hardware.security.keymint-V3",
+        "android.hardware.security.secureclock-V1",
+    ],
+    unstable: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+            apps_enabled: false,
+        },
+    },
+}
+
+aidl_interface {
+    name: "android.security.apc",
+    local_include_dir: "aidl",
+    srcs: ["aidl/android/security/apc/*.aidl"],
+    unstable: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+}
+
+aidl_interface {
+    name: "android.security.maintenance",
+    local_include_dir: "aidl",
+    srcs: ["aidl/android/security/maintenance/*.aidl"],
+    imports: [
+        "android.system.keystore2-V4",
+    ],
+    unstable: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+            apps_enabled: false,
+        },
+    },
+}
+
+aidl_interface {
+    name: "android.security.metrics",
+    local_include_dir: "aidl",
+    srcs: ["aidl/android/security/metrics/*.aidl"],
+    imports: [
+        "android.system.keystore2-V4",
+    ],
+    unstable: true,
+    backend: {
+        java: {
+            platform_apis: true,
+        },
+        ndk: {
+            enabled: true,
+            apps_enabled: false,
+        },
+    },
+}
+
+
