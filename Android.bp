@@ -34,6 +34,15 @@ filegroup {
     path: "identity/binder",
 }
 
+filegroup {
+    name: "gatekeeper_aidl",
+    srcs: [
+        "aidl/android/service/gatekeeper/IGateKeeperService.aidl",
+    ],
+    path: "aidl",
+    visibility: ["//visibility:public"],
+}
+
 aidl_interface {
     name: "android.security.legacykeystore",
     local_include_dir: "aidl",
@@ -122,5 +131,3 @@ aidl_interface {
         },
     },
 }
-
-
