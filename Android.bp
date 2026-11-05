@@ -12,35 +12,48 @@ license {
     license_text: ["NOTICE"],
 }
 
+// Pre-generated Java from AIDL — zero AIDL compilation at platform build time
 filegroup {
     name: "credstore_aidl",
-    srcs: [
-        "identity/binder/android/security/identity/ICredential.aidl",
-        "identity/binder/android/security/identity/IWritableCredential.aidl",
-        "identity/binder/android/security/identity/ICredentialStore.aidl",
-        "identity/binder/android/security/identity/AccessControlProfileParcel.aidl",
-        "identity/binder/android/security/identity/EntryNamespaceParcel.aidl",
-        "identity/binder/android/security/identity/EntryParcel.aidl",
-        "identity/binder/android/security/identity/RequestNamespaceParcel.aidl",
-        "identity/binder/android/security/identity/RequestEntryParcel.aidl",
-        "identity/binder/android/security/identity/ResultNamespaceParcel.aidl",
-        "identity/binder/android/security/identity/ResultEntryParcel.aidl",
-        "identity/binder/android/security/identity/GetEntriesResultParcel.aidl",
-        "identity/binder/android/security/identity/AuthKeyParcel.aidl",
-        "identity/binder/android/security/identity/SecurityHardwareInfoParcel.aidl",
-        "identity/binder/android/security/identity/ICredentialStoreFactory.aidl",
-        "identity/binder/android/security/identity/ISession.aidl",
-    ],
-    path: "identity/binder",
+    srcs: ["aidl-gen/credstore/**/*.java"],
+    path: "aidl-gen/credstore",
 }
 
 filegroup {
     name: "gatekeeper_aidl",
-    srcs: [
-        "aidl/android/service/gatekeeper/IGateKeeperService.aidl",
-    ],
-    path: "aidl",
+    srcs: ["aidl-gen/gatekeeper/**/*.java"],
+    path: "aidl-gen/gatekeeper",
     visibility: ["//visibility:public"],
+}
+
+filegroup {
+    name: "android.security.legacykeystore-java-source",
+    srcs: ["aidl-gen/android.security.legacykeystore-java-source/**/*.java"],
+    path: "aidl-gen/android.security.legacykeystore-java-source",
+}
+
+filegroup {
+    name: "android.security.authorization-java-source",
+    srcs: ["aidl-gen/android.security.authorization-java-source/**/*.java"],
+    path: "aidl-gen/android.security.authorization-java-source",
+}
+
+filegroup {
+    name: "android.security.apc-java-source",
+    srcs: ["aidl-gen/android.security.apc-java-source/**/*.java"],
+    path: "aidl-gen/android.security.apc-java-source",
+}
+
+filegroup {
+    name: "android.security.maintenance-java-source",
+    srcs: ["aidl-gen/android.security.maintenance-java-source/**/*.java"],
+    path: "aidl-gen/android.security.maintenance-java-source",
+}
+
+filegroup {
+    name: "android.security.metrics-java-source",
+    srcs: ["aidl-gen/android.security.metrics-java-source/**/*.java"],
+    path: "aidl-gen/android.security.metrics-java-source",
 }
 
 aidl_interface {
@@ -50,7 +63,7 @@ aidl_interface {
     unstable: true,
     backend: {
         java: {
-            platform_apis: true,
+            enabled: false,
         },
         ndk: {
             enabled: true,
@@ -70,7 +83,7 @@ aidl_interface {
     unstable: true,
     backend: {
         java: {
-            platform_apis: true,
+            enabled: false,
         },
         ndk: {
             enabled: true,
@@ -86,7 +99,7 @@ aidl_interface {
     unstable: true,
     backend: {
         java: {
-            platform_apis: true,
+            enabled: false,
         },
         ndk: {
             enabled: true,
@@ -104,7 +117,7 @@ aidl_interface {
     unstable: true,
     backend: {
         java: {
-            platform_apis: true,
+            enabled: false,
         },
         ndk: {
             enabled: true,
@@ -123,7 +136,7 @@ aidl_interface {
     unstable: true,
     backend: {
         java: {
-            platform_apis: true,
+            enabled: false,
         },
         ndk: {
             enabled: true,
